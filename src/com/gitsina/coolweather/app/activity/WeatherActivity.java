@@ -53,7 +53,7 @@ public class WeatherActivity extends Activity implements OnClickListener{
 	 * 更新天气按钮
 	 */
 	private Button refreshWeather;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
