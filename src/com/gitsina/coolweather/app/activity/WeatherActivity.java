@@ -1,6 +1,7 @@
 package com.gitsina.coolweather.app.activity;
 
 import com.github.gitsina.coolweather.R;
+import com.gitsina.coolweather.app.service.AutoUpdateService;
 import com.gitsina.coolweather.app.util.HttpCallbackListener;
 import com.gitsina.coolweather.app.util.HttpUtil;
 import com.gitsina.coolweather.app.util.Utility;
@@ -180,5 +181,7 @@ public class WeatherActivity extends Activity implements OnClickListener{
 		currentDateText.setText(prefs.getString("current_date", ""));
 		weatherInfoLayout.setVisibility(View.VISIBLE);
 		cityNameText.setVisibility(View.VISIBLE);
+		Intent intent = new Intent(this, AutoUpdateService.class);
+		startService(intent);
 	}
 }
